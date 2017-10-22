@@ -1,0 +1,22 @@
+{
+  "name": "mrcnpdlk/monolog",
+  "description": "Logger",
+  "license": "library",
+  "authors": [
+    {
+      "name": "Marcin Pudełek",
+      "email": "marcin@pudelek.org.pl"
+    }
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7",
+    "monolog/monolog":"~1"
+  },
+  "autoload": {
+    "psr-4": {
+      "mrcnpdlk\\Monolog\\": "src/"
+    }
+  }
+}
