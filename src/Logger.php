@@ -56,7 +56,7 @@ class Logger extends \Monolog\Logger
         $ts->setTimezone(static::$timezone);
 
         $record = [
-            'message'      => is_object($message) ? 'object' : (string)$message,
+            'message'      => is_object($message) || is_array($message) ? gettype($message) : (string)$message,
             'message_orig' => is_object($message) || is_array($message) ? $message : null,
             'context'      => $context,
             'level'        => $level,
