@@ -25,6 +25,13 @@ class Helper
             var_export($var);
         }
 
-        return ob_get_clean() . "\n";
+        return sprintf('%s%s%s%s%s%s',
+            str_repeat("-=", 15),
+            PHP_EOL,
+            ob_get_clean(),
+            PHP_EOL,
+            str_repeat("=-", 15),
+            PHP_EOL
+        );
     }
 }
